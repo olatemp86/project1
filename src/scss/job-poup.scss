@@ -1,0 +1,220 @@
+@import "variable";
+
+.modal_heading {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #979797;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal_heading > * {
+  flex: 1;
+}
+
+.modal_heading + div {
+  h6 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    height: 25px;
+  }
+  .MuiInputBase-root {
+    height: 38px !important;
+    margin-bottom: 10px !important;
+    margin-top: -7px;
+    &.MuiInputBase-multiline {
+      height: 110px !important;
+    }
+    > div {
+      padding-top: 8.5px !important;
+      padding-bottom: 8.5px !important;
+    }
+  }
+  .MuiFormControl-root {
+    margin-bottom: 0 !important;
+  }
+}
+
+.MuiPaper-root {
+  .MuiDialogTitle-root {
+    padding: 10px 0px 0px;
+    h6 {
+      text-align: center;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 35px;
+      color: #00aaff;
+    }
+  }
+
+  .MuiDialogTitle-root.new-modal-design {
+    background-color: #EAECF3;
+    padding-top: 25px;
+  }
+
+  .MuiDialogContent-root {
+    overflow: initial;
+  }
+
+  .MuiDialogActions-root {
+    .MuiButtonBase-root {
+      box-shadow: none;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      //line-height: 16px;
+    }
+    .MuiFab-secondary {
+      color: #000000;
+      background-color: transparent;
+    }
+
+    .MuiFab-primary {
+      background: #219653;
+      border-radius: 30px;
+      width: 195px;
+    }
+  }
+
+
+  .new-modal-design {
+    .modalDataContainer{
+      overflow-y: auto;
+      max-height: 72vh;
+
+      @media only screen and (max-height: 767px) {
+        overflow-y: auto;
+        max-height: 60vh;
+      }
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #BDBDBD;
+        border-radius: 4px;
+        border: solid 3px transparent;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    }
+    .modalPreview {
+      background-color: #EAECF3;
+      padding: 35px 50px;
+      margin: 0;
+    }
+    .modalContent {
+      background-color: #FFF;
+      padding: 35px 50px 0 50px;
+      margin: 0;
+    }
+    .previewCaption {
+      color: #828282;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .bigText {
+      fontSize: 30px;
+      fontWeight: bold;
+      color: $primary-blue;
+    }
+    .previewTextTitle {
+      margin-top: 8px;
+      color: #4F4F4F;
+      font-size: 16px;
+    }
+    .previewText {
+      color: #4F4F4F;
+      font-size: 16px;
+    }
+    .jobIdText {
+      position: absolute;
+      top: 35px;
+      left: 60px;
+      color: #828282;
+    }
+    .jobTypeText {
+      font-size: 12px;
+      background-color: #F2F2F2;
+      margin-right: 2px;
+      padding: 4px 8px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+    .description {
+      max-height: 80px;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #BDBDBD;
+        border-radius: 4px;
+        border: solid 3px transparent;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    }
+    .MuiDialogActions-root {
+      border-top: 1px solid #bdbdbd;
+      text-align: right;
+      padding: 25px  56px;
+      margin: 20px 0 0 0;
+
+      .MuiButton-root {
+        border-radius: 8px;
+        margin-left: 15px;
+      }
+
+      .MuiButton-label {
+        text-transform: none;
+      }
+
+      .MuiButton-containedSecondary {
+        margin-left: 30px;
+      }
+
+      .MuiButton-containedPrimary > .MuiButton-label {
+        color: white;
+      }
+    }
+  }
+}
+#dueDate {
+  text-align: right;
+}
+@media only screen and (max-width: 767px) {
+  .MuiPaper-root {
+    .MuiDialogActions-root {
+      align-items: baseline;
+    }
+  }
+}
